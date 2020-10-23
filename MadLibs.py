@@ -2,6 +2,7 @@
 from random import randint
 import copy
 
+# Words for random selection and addition
 word_dict = {
     'adjective':['greedy','abrasive','grubby','groovy','rich','harsh','tasty','slow'], 
     'city name':['Chicago','New York','Charlotte','Indianapolis','Louisville','Denver'], 
@@ -10,6 +11,7 @@ word_dict = {
     'sports noun':['ball','mit','puck','uniform','helmet','scoreboard','player']
 }
 
+# STory to fit the above words
 story = (
     "One day my {} friend and I decided to go to the {} game in {}. "+
     "We really wanted to see the {} play the {}. So, we {} our {} "+ 
@@ -18,7 +20,7 @@ story = (
     "We had a great time! We plan to go again next year!"
 )
 
-
+# Randomly select the index and the corresponding word.
 def get_word(type, local_dict):
     ''' get a random word from the word_dict based on word type '''
     words = local_dict[type]
@@ -47,8 +49,9 @@ def create_story():
         get_word('noun', local_dict)
 )
 
-story1 = create_story()
-print( story1 )
+# Every time story is filled with random words.
+story_a = create_story()
+print( story_a )
 
-story2 = create_story()
-print( story2 )
+story_b = create_story()
+print( story_b )
